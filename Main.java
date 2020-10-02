@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * Tell user to enter a positive number
+ * @author Gavin Sandhar
  */
 public class Main {
 
@@ -9,7 +10,15 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // create a scanner for user input
+    Scanner input = new Scanner(System.in);
     
+    // declare a variable
+    int upTo;
+    do{
+      System.out.println("Please enter a positive integer. Enter a negative integer to quit.");
+      upTo = input.nextInt();
+    }while(upTo <= 0);
+    System.out.println("All Done!");
   }
 }
